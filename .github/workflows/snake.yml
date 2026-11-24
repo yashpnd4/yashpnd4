@@ -1,0 +1,51 @@
+name: Generate contribution snake
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - README.md
+      - assets/profile-banner.svg
+      - assets/profile-highlights.svg
+      - assets/profile-signal.svg
+      - assets/language-stack.svg
+      - .github/workflows/snake.yml
+      - .github/scripts/generate-activity-card.mjs
+  schedule:
+    - cron: "15 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+
+      - name: Generate the contribution snake
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b
+        with:
+          github_user_name: yashpnd4
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: Generate contribution activity card
+        run: node .github/scripts/generate-activity-card.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USER_NAME: yashpnd4
+
+      - name: Publish generated SVGs
+        uses: crazy-max/ghaction-github-pages@fbf0a4fa4e00f45accd6cf3232368436ec06ed59
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

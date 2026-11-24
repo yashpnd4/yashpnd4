@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="220" viewBox="0 0 600 220">
+  <defs>
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#123366"/>
+      <stop offset=".52" stop-color="#0b2142"/>
+      <stop offset="1" stop-color="#12508a"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#168bff" stop-opacity=".08"/>
+      <stop offset=".55" stop-color="#168bff" stop-opacity=".25"/>
+      <stop offset="1" stop-color="#35d4c3" stop-opacity=".08"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="592" height="212" rx="20" fill="#071426" stroke="#3d7fc2" stroke-width="3"/>
+  <rect x="13" y="13" width="574" height="194" rx="15" fill="url(#frame)"/>
+  <rect x="13" y="13" width="574" height="194" rx="15" fill="url(#glow)"/>
+  <path d="M15 19h175" stroke="#2ea8ff" stroke-width="7" opacity=".55"/>
+  <text x="28" y="47" fill="#e4f2ff" font-family="Arial,sans-serif" font-size="21" font-weight="700">Profile Signal</text>
+  <text x="29" y="66" fill="#91b3d2" font-family="Arial,sans-serif" font-size="12">GitHub snapshot</text>
+
+  <g font-family="Arial,sans-serif">
+    <rect x="24" y="78" width="128" height="105" rx="12" fill="#091a31" stroke="#3a74ac" stroke-width="2"/>
+    <rect x="166" y="78" width="128" height="105" rx="12" fill="#091a31" stroke="#3a74ac" stroke-width="2"/>
+    <rect x="308" y="78" width="128" height="105" rx="12" fill="#091a31" stroke="#3a74ac" stroke-width="2"/>
+    <rect x="450" y="78" width="128" height="105" rx="12" fill="#091a31" stroke="#3a74ac" stroke-width="2"/>
+
+    <text x="37" y="101" fill="#9ebad4" font-size="13">Stars</text>
+    <text x="37" y="143" fill="#eff7ff" font-size="31" font-weight="700">1</text>
+    <path d="M37 163h76" stroke="#3a74ac" stroke-width="5" stroke-linecap="round"/>
+
+    <text x="179" y="101" fill="#9ebad4" font-size="13">Contributions</text>
+    <text x="179" y="143" fill="#58d5f7" font-size="31" font-weight="700">146</text>
+    <path d="M179 163h88" stroke="#27b3e8" stroke-width="5" stroke-linecap="round"/>
+
+    <text x="321" y="101" fill="#9ebad4" font-size="13">Repositories</text>
+    <text x="321" y="143" fill="#eff7ff" font-size="31" font-weight="700">12</text>
+    <path d="M321 163h76" stroke="#3a74ac" stroke-width="5" stroke-linecap="round"/>
+
+    <text x="463" y="101" fill="#9ebad4" font-size="13">Followers</text>
+    <text x="463" y="143" fill="#7be18d" font-size="31" font-weight="700">4</text>
+    <path d="M463 163h76" stroke="#3a74ac" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>
